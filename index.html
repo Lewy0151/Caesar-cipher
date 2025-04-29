@@ -1,20 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ceaser Cipher Encoder/Decoder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="flex items-center justify-center min-h-screen bg-white text-white overflow-hidden p-4"
+  >
+    <form class="flex flex-col items-center gap-6 w-full max-w-6xl">
+      <div class="flex flex-row justify-center gap-6 w-full">
 
+        <!-- Input Container -->
+        <div
+          class="w-96 h-60 bg-[#5ac3b0] rounded-lg shadow-md p-4 flex flex-col"
+        >
+          <label
+            for="inputtext"
+            class="block text-xl text-center font-medium font-mono text-[#de5935] mb-2"
+            >Input</label
+          >
+          <div class="bg-[#f7cd46] rounded-md p-4 flex-grow flex">
+            <textarea
+              id="inputtext"
+              class="w-full h-full resize-none bg-[#f7cd46] text-black font-mono focus:outline-none"
+              placeholder="Type your message here..."
+              required
+            ></textarea>
+          </div>
+        </div>
 
+        <!-- Encode/Decode Container -->
+        <div class="w-64 bg-[#de5935] rounded-lg shadow-lg p-6">
+          <div id="options" class="text-white font-mono text-sm space-y-4">
+            
+            <!-- Key Input -->
+            <div>
+              <label for="shiftKey" class="block mb-1">Shift Key (1–26)</label>
+              <input
+                type="number"
+                id="shiftKey"
+                name="shiftKey"
+                min="1"
+                max="26"
+                class="w-full p-1 text-black rounded focus:outline-none"
+                placeholder="Enter a number"
+              />
+            </div>
 
+            <!-- Encode/Decode Dropdown -->
+            <div>
+              <label for="mode" class="block mb-1">Mode</label>
+              <select
+                id="mode"
+                name="mode"
+                class="w-full p-1 text-black rounded focus:outline-none"
+              >
+                <option value="encode">Encode</option>
+                <option value="decode">Decode</option>
+              </select>
+            </div>
 
+            <!-- Submit Button -->
+            <div>
+              <button
+                id="submitButton"
+                class="w-full bg-white text-[#de5935] font-bold py-1 px-2 rounded hover:bg-gray-100 transition"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
 
-
-
-
+        <!-- Output Container -->
+        <div
+          class="w-96 h-60 bg-[#5ac3b0] rounded-lg shadow-md p-4 flex flex-col"
+        >
+          <label
+            for="textarea"
+            class="block text-xl text-center font-medium font-mono text-[#de5935] mb-2"
+            >Output</label
+          >
+          <div class="bg-[#f7cd46] rounded-md p-4 flex-grow flex">
+            <div
+              id="textarea"
+              class="w-full h-full bg-[#f7cd46] text-black font-mono whitespace-pre-line break-words overflow-y-auto"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </form>
     <script src="ceaserCipher.js"></script>
-</body>
+  </body>
 </html>
