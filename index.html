@@ -7,8 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body
-    class="flex items-center justify-center min-h-screen bg-white text-white overflow-hidden p-4"
-  >
+    class="flex flex-col items-center justify-center min-h-screen bg-white text-white overflow-hidden p-4 ">
+
+      <!-- Page Title -->
+  <h1 class="text-4xl font-bold text-[#de5935] font-mono text-center mb-6 ">
+    Caesar Cipher Encoder/Decoder
+  </h1>
+
     <form class="flex flex-col items-center gap-6 w-full max-w-6xl">
       <div class="flex flex-row justify-center gap-6 w-full">
 
@@ -24,7 +29,7 @@
           <div class="bg-[#f7cd46] rounded-md p-4 flex-grow flex">
             <textarea
               id="inputtext"
-              class="w-full h-full resize-none bg-[#f7cd46] text-black font-mono focus:outline-none"
+              class="w-full h-full resize-none bg-[#f7cd46] text-[#5ac3b0] text-medium font-mono focus:outline-none"
               placeholder="Type your message here..."
               required
             ></textarea>
@@ -37,25 +42,25 @@
             
             <!-- Key Input -->
             <div>
-              <label for="shiftKey" class="block mb-1">Shift Key (1–26)</label>
+              <label for="shiftKey" class="block mb-1 text-[#f7cd46]"> Key (1–26)</label>
               <input
                 type="number"
                 id="shiftKey"
                 name="shiftKey"
                 min="1"
                 max="26"
-                class="w-full p-1 text-black rounded focus:outline-none"
+                class="w-full p-1 text-[#de5935] rounded focus:outline-none bg-[#f7cd46]"
                 placeholder="Enter a number"
               />
             </div>
 
             <!-- Encode/Decode Dropdown -->
             <div>
-              <label for="mode" class="block mb-1">Mode</label>
+              <label for="mode" class="block mb-1 text-[#f7cd46]">Mode</label>
               <select
                 id="mode"
                 name="mode"
-                class="w-full p-1 text-black rounded focus:outline-none"
+                class="w-full p-1 text-[#de5935] rounded focus:outline-none bg-[#f7cd46]"
               >
                 <option value="encode">Encode</option>
                 <option value="decode">Decode</option>
@@ -66,7 +71,7 @@
             <div>
               <button
                 id="submitButton"
-                class="w-full bg-white text-[#de5935] font-bold py-1 px-2 rounded hover:bg-gray-100 transition"
+                class="w-full bg-[#f7cd46] text-[#de5935] font-bold py-3 px-2 rounded hover:bg-[#5ac3b0] hover:text-[#f7cd46] transition"
               >
                 Submit
               </button>
@@ -86,7 +91,7 @@
           <div class="bg-[#f7cd46] rounded-md p-4 flex-grow flex">
             <div
               id="textarea"
-              class="w-full h-full bg-[#f7cd46] text-black font-mono whitespace-pre-line break-words overflow-y-auto"
+              class="w-full h-full bg-[#f7cd46] text-[#5ac3b0] text-medium font-mono whitespace-pre-line break-words overflow-y-auto"
             ></div>
           </div>
         </div>
